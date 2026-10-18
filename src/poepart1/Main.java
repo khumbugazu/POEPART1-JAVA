@@ -5,6 +5,7 @@
 package poepart1;
 
 import java.util.Scanner;
+import poepart2.QuickChat;
 
 public class Main {
     public static void main(String[] args)
@@ -52,5 +53,11 @@ public class Main {
         boolean loginStatus=obj.loginUser(loginU,loginP);
         
         System.out.println(obj.returnLoginStatus(loginStatus));  
+        
+        //If login successful go to QuickChat
+        if (loginStatus== true) {
+            QuickChat quickchat = new QuickChat();
+            quickchat.beginChat();
+        }
     }
 }
